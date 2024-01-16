@@ -1,0 +1,38 @@
+# idea
+.idea
+
+# Logs
+logs
+*.log
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+.DS_Store
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional eslint cache
+.eslintcache
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+.vscode
+
+# Swap the comments on the following lines if you wish to use zero-installs
+# Documentation here: https://yarnpkg.com/features/zero-installs
+# !.yarn/cache
+.pnp.*
+

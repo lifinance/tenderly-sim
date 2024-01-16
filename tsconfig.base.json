@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es2022",
+    "module": "commonjs",
+    "outDir": "./build/app",
+    "rootDir": "./",
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "strictFunctionTypes": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "allowJs": false,
+    "checkJs": false
+  },
+  "include": ["src/**/*", "./.eslintrc.js"]
+}

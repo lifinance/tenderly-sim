@@ -1,0 +1,26 @@
+extends: default
+
+ignore: |
+  pnpm-lock.yaml
+  node_modules
+
+rules:
+  braces:
+    min-spaces-inside: 1
+    max-spaces-inside: 1
+  brackets:
+    min-spaces-inside: 1
+    max-spaces-inside: 1
+  document-start: disable
+  document-end:
+    present: false
+  empty-lines:
+    max: 1
+    max-start: 0
+    max-end: 0
+  empty-values: enable
+  line-length: disable
+  octal-values: enable
+  truthy:
+    level: error
+    check-keys: false

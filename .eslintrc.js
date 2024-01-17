@@ -21,7 +21,6 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'error',
     'no-negated-condition': 'error',
     'unused-imports/no-unused-imports': 'error',
-    'local-rules/no-native-error-throw': 'error',
     'no-console': 'error',
     'no-return-await': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -36,8 +35,6 @@ module.exports = {
       },
     ],
     'deprecation/deprecation': 'warn',
-    'neverthrow/must-use-result': 'error',
-    'no-implicit-any-catch': 'error',
     'no-implicit-coercion': 'error',
     'max-params': ['error', { max: 5 }],
     'max-lines-per-function': [
@@ -83,11 +80,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: [
-          '**/*.spec.ts',
-          '**/globalSetup.ts',
-          '**/globalTeardown.ts',
-        ],
+        devDependencies: ['**/*.spec.ts'],
         includeTypes: true,
       },
     ],
@@ -98,12 +91,7 @@ module.exports = {
     'import/no-namespace': 'off',
     'import/no-nodejs-modules': 'off',
     'import/no-self-import': 'error',
-    'import/no-unassigned-import': [
-      'error',
-      {
-        allow: ['FastifyAugmentation/fastify.request.types'],
-      },
-    ],
+    'import/no-unassigned-import': ['error'],
     'import/no-unresolved': 'error',
     'import/no-restricted-paths': ['error'],
     'import/no-unused-modules': [
@@ -128,20 +116,13 @@ module.exports = {
     ],
     'prettier/prettier': 'error',
   },
-  plugins: [
-    'local-rules',
-    '@typescript-eslint',
-    'deprecation',
-    'import',
-    'unused-imports',
-  ],
+  plugins: ['@typescript-eslint', 'deprecation', 'import', 'unused-imports'],
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:import/typescript',
   ],
   overrides: [
-
     {
       // tests can have longer files/lines
       files: ['src/**/*.spec.ts'],

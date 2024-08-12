@@ -1,14 +1,22 @@
 {
-  "name": "lifi-default-repository-setup",
+  "name": "@lifi/tenderlysim",
   "version": "0.0.1",
-  "description": "Showcase of our default setup for eslint, prettier, ...",
+  "description": "Helpers to simulate lifi quotes",
   "private": true,
   "author": {
     "name": "LI.FI",
     "url": "https://li.fi"
   },
+  "module": "./build/src/index.js",
+  "types": "./build/src/index.d.ts",
+  "exports": {
+    ".": "./build/src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["build"],
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
+    "demo": "node -r ts-node/register src/demo.ts",
     "clean": "rm -rf ./build",
     "test": "jest",
     "test:unit": "pnpm test .unit.spec.ts",
@@ -46,5 +54,14 @@
     "ts-node": "^10.9.2",
     "typescript": "5.3.3"
   },
-  "packageManager": "pnpm@8.12.0"
+  "packageManager": "pnpm@8.12.0",
+  "dependencies": {
+    "@lifi/types": "^15.2.0",
+    "@types/memoizee": "^0.4.11",
+    "axios": "^1.7.3",
+    "ethers": "^6.13.2",
+    "memoizee": "^0.4.17",
+    "pino": "^9.3.2",
+    "tsconfig-paths": "^4.2.0"
+  }
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"http.axios.js","sourceRoot":"/","sources":["src/http/http.axios.ts"],"names":[],"mappings":";;;;;;AAAA,kDAA0B;AAEb,QAAA,QAAQ,GAAG,eAAK,CAAA","sourcesContent":["import axios from \"axios\";\n\nexport const instance = axios\n"]}

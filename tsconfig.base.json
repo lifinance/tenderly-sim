@@ -3,7 +3,7 @@
     "baseUrl": "src",
     "target": "es2022",
     "module": "commonjs",
-    "outDir": "./build/app",
+    "outDir": "./build",
     "rootDir": "./",
     "sourceMap": true,
     "inlineSources": true,
@@ -18,7 +18,17 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": false,
-    "checkJs": false
+    "checkJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@tenderlysim/*": ["./*"]
+    }
   },
-  "include": ["src/**/*", "./.eslintrc.js"]
+  "include": ["src/**/*", "./.eslintrc.js"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"logger.js","sourceRoot":"/","sources":["src/logger/logger.ts"],"names":[],"mappings":";;;AAAA,+BAA2B;AAEpB,MAAM,MAAM,GAAG,GAAG,EAAE,CAAC,IAAA,WAAI,GAAE,CAAA;AAArB,QAAA,MAAM,UAAe","sourcesContent":["import { pino } from 'pino'\n\nexport const logger = () => pino()\n"]}

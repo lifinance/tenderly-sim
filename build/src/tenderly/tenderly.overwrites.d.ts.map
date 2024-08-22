@@ -1,1 +1,0 @@
-{"version":3,"file":"tenderly.overwrites.d.ts","sourceRoot":"/","sources":["src/tenderly/tenderly.overwrites.ts"],"names":[],"mappings":"AAYA,OAAO,EACL,cAAc,EAIf,MAAM,mBAAmB,CAAA;AAsG1B,eAAO,MAAM,iBAAiB,mBACX,cAAc,cAChB;IACb,OAAO,EAAE,MAAM,CAAA;IACf,YAAY,EAAE,MAAM,CAAA;IACpB,MAAM,EAAE,MAAM,CAAA;IACd,YAAY,EAAE,MAAM,CAAA;IACpB,cAAc,EAAE,MAAM,CAAA;CACvB;;;;EA6CA,CAAA"}

@@ -1,7 +1,7 @@
 import { ChainId, ErrorCode } from '@lifi/types'
 
 import { HttpResponse, http } from '@tenderlysim/http'
-import { logger } from 'logger'
+import { logger } from '@tenderlysim/logger'
 import { LifiError, getErrorMessage } from '@tenderlysim/common'
 
 import {
@@ -70,12 +70,14 @@ export const encodeContractStates =
       },
     }
 
-    const encodedState = await http().post(url, request, {
-      headers: TENDERLY_REQUEST_HEADERS(tenderlyConfig.accessKey),
-    }).catch(e => {
-      debugger
-      throw e
-    })
+    const encodedState = await http()
+      .post(url, request, {
+        headers: TENDERLY_REQUEST_HEADERS(tenderlyConfig.accessKey),
+      })
+      .catch((e) => {
+        debugger
+        throw e
+      })
 
     return {
       [tokenAddress]: {

@@ -15,7 +15,7 @@ coverage
 *.lcov
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-# build
+build
 
 # Dependency directories
 node_modules/

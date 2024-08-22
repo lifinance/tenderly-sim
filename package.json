@@ -13,9 +13,12 @@
     ".": "./build/src/index.js",
     "./package.json": "./package.json"
   },
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
-    "build": "tsc --project tsconfig.build.json",
+    "prepare": "pnpm build",
+    "build": "tsc --project tsconfig.build.json && pnpm resolve-tspaths",
     "demo": "node -r ts-node/register src/demo.ts",
     "clean": "rm -rf ./build",
     "test": "jest",
@@ -62,6 +65,7 @@
     "ethers": "^6.13.2",
     "memoizee": "^0.4.17",
     "pino": "^9.3.2",
+    "resolve-tspaths": "^0.8.19",
     "tsconfig-paths": "^4.2.0"
   }
 }

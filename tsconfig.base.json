@@ -21,7 +21,6 @@
     "checkJs": false,
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
     "paths": {
       "@tenderlysim/*": ["./*"]
     }

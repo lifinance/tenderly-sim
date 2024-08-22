@@ -9,7 +9,7 @@ faking approvals and token balances.
 In order to use this package you will need to add this line in your `package.json` using the npm github syntax as follows:
 
 ```
-    "@lifi/tenderlysim":"github:lifinance/tenderly-sim"
+     "@lifi/tenderlysim": "git@github.com:lifinance/tenderly-sim"
 ```
 
 ### Example usage - Simulate a diamond call

@@ -28,12 +28,19 @@ In order to use this package you will need to add this line in your `package.jso
   }
 
   logger().info(quote)
-  const sim = await simulate(config)(quote, {
-    senderTokenBalanceAndApproval: true,
-    senderNativeBalance: false,
-  })
-
-  return sim
+  const sim = await simulate(config)(
+    {
+      fromToken: quote.action.fromToken.address,
+      toToken: quote.action.toToken.address,
+      fromChain: quote.action.fromChainId,
+      fromAmount: BigInt(quote.action.fromAmount),
+      transactionRequest: quote.transactionRequest!,
+    },
+    {
+      senderTokenBalanceAndApproval: true,
+      senderNativeBalance: false,
+    }
+  )
 ```
 
 which results in the following response:

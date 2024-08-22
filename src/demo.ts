@@ -19,10 +19,19 @@ export const main = async () => {
   }
 
   logger().info(quote)
-  const sim = await simulate(config)(quote, {
-    senderTokenBalanceAndApproval: true,
-    senderNativeBalance: false,
-  })
+  const sim = await simulate(config)(
+    {
+      fromToken: quote.action.fromToken.address,
+      toToken: quote.action.toToken.address,
+      fromChain: quote.action.fromChainId,
+      fromAmount: BigInt(quote.action.fromAmount),
+      transactionRequest: quote.transactionRequest!,
+    },
+    {
+      senderTokenBalanceAndApproval: true,
+      senderNativeBalance: false,
+    }
+  )
 
   return sim
 }

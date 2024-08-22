@@ -1,4 +1,4 @@
-import { ChainId, ErrorCode, LiFiStep, TransactionRequest } from '@lifi/types'
+import { ChainId, ErrorCode, TransactionRequest } from '@lifi/types'
 
 import { LifiError } from '@tenderlysim/common'
 import { logger } from '@tenderlysim/logger'
@@ -109,14 +109,20 @@ export const getStateOverwrites =
 export const simulate =
   (tenderlyConfig: TenderlyConfig) =>
   async (
-    quote: LiFiStep,
+    quote: {
+      fromToken: string
+      toToken: string
+      fromChain: ChainId
+      fromAmount: bigint
+      transactionRequest: TransactionRequest
+    },
     overwrites = {
       senderTokenBalanceAndApproval: true,
       senderNativeBalance: true,
     }
   ) => {
     // tenderly supported
-    if (!TENDERLY_CHAINS.includes(quote.action.fromChainId)) {
+    if (!TENDERLY_CHAINS.includes(quote.fromChain)) {
       return {
         result: 'IMPOSSIBLE',
         error: 'TENDERLY_UNSUPPORTED_CHAIN',
@@ -126,8 +132,8 @@ export const simulate =
     }
     // token supported
     if (
-      knownFailingTokens[quote.action.fromChainId]?.includes(
-        quote.action.fromToken.address.toLowerCase() as Lowercase<string>
+      knownFailingTokens[quote.fromChain]?.includes(
+        quote.fromToken.toLowerCase() as Lowercase<string>
       )
     ) {
       return {
@@ -144,9 +150,9 @@ export const simulate =
     let stateOverwrites
     try {
       stateOverwrites = await getStateOverwrites(tenderlyConfig)(overwrites, {
-        chainId: quote.action.fromChainId,
-        tokenAddress: quote.action.fromToken.address,
-        amount: quote.action.fromAmount,
+        chainId: quote.fromChain,
+        tokenAddress: quote.fromToken,
+        amount: quote.fromAmount.toString(),
         ownerAddress: transactionRequest.from,
         spenderAddress: transactionRequest.to,
       })
@@ -160,24 +166,12 @@ export const simulate =
       }
     }
 
-    // Overwrite for optimism bridge gas simulation issues:
-    // Simulation of calls that make use of the native optimism bridge fail because the code tries to burn gas.
-    // Hop uses the optimism bridge internally for transfers between ETH and OPT.
-    if (
-      (quote.tool === 'optimism' || quote.tool === 'hop') &&
-      quote.action.fromChainId === ChainId.ETH &&
-      quote.action.toChainId === ChainId.OPT
-    ) {
-      // Default gas limit used by tenderly
-      transactionRequest.gasLimit = '8000000'
-    }
-
     // Overwrite for transactions on specific L2s
     // So we can test the transactions even if the gasLimits the API returns are too low
-    if (quote.action.fromChainId === ChainId.ARB) {
+    if (quote.fromChain === ChainId.ARB) {
       transactionRequest.gasLimit = '20000000'
     }
-    if (quote.action.fromChainId === ChainId.MNT) {
+    if (quote.fromChain === ChainId.MNT) {
       transactionRequest.gasLimit = '' // do not pass a limit
     }
 

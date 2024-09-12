@@ -31,6 +31,9 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.MOO,
   ChainId.MOD,
   ChainId.MNT,
+  ChainId.BLS,
+  ChainId.TAI,
+  ChainId.FRA,
 ]
 
 export const knownProxyTokens: Record<

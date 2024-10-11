@@ -1,4 +1,3 @@
-
 ## Tenderly simulations
 This package makes it easier to interact with Tenderly API for simulating transactions.
 It exposes functions to gather transaction information, simulate transactions and apply overrides such as
@@ -133,3 +132,16 @@ which results in the following response:
 }
 ```
 
+### Development
+
+#### Update supported Chains
+
+The supported chains have to be matched between the chains [Tenderly supports](https://docs.tenderly.co/supported-networks) and the chain [LI.FI has types](https://github.com/lifinance/types/blob/main/src/chains/base.ts) for.
+
+- Run `pnpm update` to load the newest types version of LI.FI.
+
+- Visit the [Tenderly docs](https://docs.tenderly.co/supported-networks) to see what chains were added
+
+- Add new chains in [./src/tenderly/tenderly.config.ts](./src/tenderly/tenderly.config.ts)
+
+- Push changes as a PR for review

@@ -29,7 +29,7 @@ export type TenderlyTransactionResponse = {
   method: string
 }
 
-export type TenderlySimulation = {
+type TenderlySimulation = {
   id: string
   project_id: string
   owner_id: string
@@ -81,7 +81,7 @@ export type TenderlySimulation = {
   created_at: string
 }
 
-export type TenderlyTransaction = {
+type TenderlyTransaction = {
   hash: string
   block_hash: string
   block_number: number

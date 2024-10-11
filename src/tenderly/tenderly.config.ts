@@ -14,26 +14,46 @@ export type TenderlyConfig = {
 export const projectBaseUrl = (tenderlyConfig: TenderlyConfig) =>
    `${TENDERLY_BASE_URL}account/${tenderlyConfig.user}/project/${tenderlyConfig.project}`
 
+// Supported networks, order as in the tenderly docs (excluding testnets)
+// https://docs.tenderly.co/supported-networks
 export const TENDERLY_CHAINS: number[] = [
-  ChainId.ETH,
-  ChainId.RSK,
-  ChainId.BSC,
-  ChainId.DAI,
-  ChainId.POL,
-  ChainId.OPT,
-  ChainId.ARN,
-  ChainId.ARB,
-  ChainId.AVA,
-  ChainId.FTM,
-  ChainId.BAS,
-  ChainId.LNA,
-  ChainId.MOR,
-  ChainId.MOO,
-  ChainId.MOD,
-  ChainId.MNT,
-  ChainId.BLS,
-  ChainId.TAI,
-  ChainId.FRA,
+  ChainId.ETH, // Ethereum Mainnet - 1
+  // ApeChain - 33139
+  ChainId.ARN, // Arbitrum Nova - 42170
+  ChainId.ARB, // Arbitrum One - 42161
+  // BOB - 60808
+  ChainId.BAS, // Base Mainnet - 8453
+  ChainId.BLS, // Blast - 81457
+  // Boba BNB - 56288
+  ChainId.BOB, // Boba Ethereum - 288
+  // Curtis - 33111
+  ChainId.FRA, // Fraxtal - 252
+  // Gold - 4653
+  ChainId.IMX, // Immutable - 13371
+  // Kinto - 7887
+  // Lisk - 1135
+  ChainId.MOD, // Mode - 34443
+  ChainId.OPT, // Optimistic Ethereum - 10
+  ChainId.POL, // Polygon - 137
+  // Polynomial - 8008
+  // Real - 111188
+  // Soneium Minato - 1946
+  ChainId.TAI, // Taiko Mainnet - 167000
+  // Unreal - 18233
+  // World Chain - 480
+  ChainId.AVA, // Avalanche C-Chain - 43114
+  ChainId.BSC, // BNB - 56
+  ChainId.FTM, // Fantom - 250
+  ChainId.DAI, // Gnosis Chain - 100
+  ChainId.LNA, // Linea - 59144
+  ChainId.MNT, // Mantle - 5000
+  // Moonbase Alpha - 1287
+  ChainId.MOO, // Moonbeam - 1284
+  ChainId.MOR, // Moonriver - 1285
+  ChainId.RSK, // RSK - 30
+  // Sei Pacific-1 - 1329
+  // ZetaChain - 7000
+  // Zora - 7777777
 ]
 
 export const knownProxyTokens: Record<

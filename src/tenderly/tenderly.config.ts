@@ -31,7 +31,6 @@ export const TENDERLY_CHAINS: number[] = [
   // Gold - 4653
   ChainId.IMX, // Immutable - 13371
   // Kinto - 7887
-  // Lisk - 1135
   ChainId.MOD, // Mode - 34443
   ChainId.OPT, // Optimistic Ethereum - 10
   ChainId.POL, // Polygon - 137
@@ -40,7 +39,6 @@ export const TENDERLY_CHAINS: number[] = [
   // Soneium Minato - 1946
   ChainId.TAI, // Taiko Mainnet - 167000
   // Unreal - 18233
-  // World Chain - 480
   ChainId.AVA, // Avalanche C-Chain - 43114
   ChainId.BSC, // BNB - 56
   ChainId.FTM, // Fantom - 250
@@ -51,6 +49,8 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.MOO, // Moonbeam - 1284
   ChainId.MOR, // Moonriver - 1285
   ChainId.RSK, // RSK - 30
+  ChainId.WCC, // WorldChain - 480
+  ChainId.LSK, // Lisk - 1135
   // Sei Pacific-1 - 1329
   // ZetaChain - 7000
   // Zora - 7777777

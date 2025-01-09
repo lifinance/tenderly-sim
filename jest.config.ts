@@ -24,6 +24,7 @@ const config: Config = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src',
   }),
+  passWithNoTests: true,
 }
 
 export default config

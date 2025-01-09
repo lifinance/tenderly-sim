@@ -2,28 +2,26 @@ import { ChainId } from '@lifi/types'
 
 import { getTransactionDetails } from './tenderly.api'
 
-beforeAll(() => {
-  jest.mock('@tenderlysim/http', () => {
-    return {
-      http: () => ({
-        get: (url: string) => {
-          if (
-            url.includes(
-              '0x9d6f5e6009d65f65493244b82682b7210648d1dad10ecece2f81c01e951d4ed0'
-            )
-          ) {
-            return { data: { error_message: 'execution error' } }
-          } else if (
-            url.includes(
-              '0x9d6f5e6009d65f65493244b82682b7210648d1dad10ecece2f81c01e951d41d0'
-            )
-          ) {
-            return { code: 404 }
-          }
-        },
-      }),
-    }
-  })
+jest.mock('@tenderlysim/http', () => {
+  return {
+    http: () => ({
+      get: (url: string) => {
+        if (
+          url.includes(
+            '0x9d6f5e6009d65f65493244b82682b7210648d1dad10ecece2f81c01e951d4ed0'
+          )
+        ) {
+          return { data: { error_message: 'execution error' } }
+        } else if (
+          url.includes(
+            '0x9d6f5e6009d65f65493244b82682b7210648d1dad10ecece2f81c01e951d41d0'
+          )
+        ) {
+          return { status: 404 }
+        }
+      },
+    }),
+  }
 })
 
 describe('Tenderly', () => {
@@ -37,11 +35,12 @@ describe('Tenderly', () => {
       expect(result.error_message).toEqual('execution error')
     })
 
+    const unRealChainId = 99999
     const failedRequestCases = [
       {
         value: {
           hash: '0x9d6f5e6009d65f65493244b82682b7210648d1dad10ecece2f81c01e951d4ed0',
-          chain: ChainId.AUR,
+          chain: unRealChainId,
         },
         expected: 'The requested tx chain is not supported by Tenderly',
       },

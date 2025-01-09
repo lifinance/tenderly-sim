@@ -1,5 +1,5 @@
 type LifiError = { message: string; code: number }
-export const getLifiError = ({
+export const LifiError = ({
   message,
   code,
 }: {

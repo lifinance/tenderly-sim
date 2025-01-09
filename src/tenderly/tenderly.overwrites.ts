@@ -3,7 +3,7 @@ import { ethers } from 'ethers'
 import memoizee from 'memoizee'
 
 import { logger } from '@tenderlysim/logger'
-import { getLifiError } from '@tenderlysim/common'
+import { LifiError } from '@tenderlysim/common'
 
 import {
   encodeContractStates,
@@ -67,7 +67,7 @@ const getApprovalMapping = (
       },
       `Unknown approval mapping for token ${tokenImplementationAddress}`
     )
-    throw getLifiError({
+    throw LifiError({
       message: `Unable to find matching mapping in knownAllowanceMappings.`,
       code: ErrorCode.NotProcessableError,
     })
@@ -105,7 +105,7 @@ const getBalanceMapping = (
       },
       `Unknown balance mapping for token ${tokenImplementationAddress}`
     )
-    throw getLifiError({
+    throw LifiError({
       message: `Unable to find matching mapping in knownBalanceMappings.`,
       code: ErrorCode.NotProcessableError,
     })
@@ -143,7 +143,7 @@ export const getTokenOverwrite =
       tokenImplementationAddress
     )
     if (contractStates === undefined) {
-      throw getLifiError({
+      throw LifiError({
         message: `Unable to find contract states.`,
         code: ErrorCode.ThirdPartyError,
       })

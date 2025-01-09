@@ -2,7 +2,7 @@ import { ChainId, ErrorCode } from '@lifi/types'
 
 import { HttpResponse, http } from '@tenderlysim/http'
 import { logger } from '@tenderlysim/logger'
-import { getLifiError, getErrorMessage, isLifiError } from '@tenderlysim/common'
+import { LifiError, getErrorMessage, isLifiError } from '@tenderlysim/common'
 
 import {
   TENDERLY_BASE_URL,
@@ -105,14 +105,14 @@ const validateTransactionDetailsResponse = (
   response: HttpResponse<TenderlyTransactionResponse>
 ) => {
   if (response.status === 401) {
-    throw getLifiError({
+    throw LifiError({
       message: 'Get transaction information call is Unauthorized',
       code: ErrorCode.UnauthorizedError,
     })
   }
 
   if (response.status == 404) {
-    throw getLifiError({
+    throw LifiError({
       message: 'The tx was not found by Tenderly',
       code: ErrorCode.NotFoundError,
     })
@@ -126,7 +126,7 @@ export const getTransactionDetails =
     chainId: ChainId
   ): Promise<TenderlyTransactionResponse> => {
     if (!TENDERLY_CHAINS.includes(chainId)) {
-      throw getLifiError({
+      throw LifiError({
         message: 'The requested tx chain is not supported by Tenderly',
         code: ErrorCode.NotProcessableError,
       })
@@ -148,7 +148,7 @@ export const getTransactionDetails =
         )}`
       )
       if (isLifiError(error)) throw error
-      throw getLifiError({
+      throw LifiError({
         message: 'The getTransactionDetails call failed',
         code: ErrorCode.ThirdPartyError,
       })

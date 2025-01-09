@@ -1,6 +1,6 @@
 import { ChainId, ErrorCode, TransactionRequest } from '@lifi/types'
 
-import { LifiError } from '@tenderlysim/common'
+import { getLifiError } from '@tenderlysim/common'
 import { logger } from '@tenderlysim/logger'
 
 import { simulateTransaction } from './tenderly.api'
@@ -18,42 +18,42 @@ const validateTransactionRequest = (
   transactionRequest?: TransactionRequest
 ) => {
   if (transactionRequest === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `No transaction request passed`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.from === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing from`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.to === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing to`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.chainId === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing chainId`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.data === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing data`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.gasPrice === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing gasPrice`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.gasLimit === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing gasLimit`,
       code: ErrorCode.MalformedSchema,
     })
   if (transactionRequest.value === undefined)
-    throw LifiError({
+    throw getLifiError({
       message: `transactionRequest is missing value`,
       code: ErrorCode.MalformedSchema,
     })

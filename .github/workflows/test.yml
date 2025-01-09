@@ -5,14 +5,15 @@ on:
   - merge_group
 
 jobs:
-  unit:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/install
-      - name: Unit Tests
-        run: pnpm test:unit
+  # No unit tests available
+  # unit:
+  #   runs-on: ubuntu-latest
+  #   continue-on-error: true
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: ./.github/actions/install
+  #     - name: Unit Tests
+  #       run: pnpm test:unit
 
   integration:
     runs-on: ubuntu-latest

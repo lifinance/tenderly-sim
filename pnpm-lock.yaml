@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@lifi/types':
-    specifier: ^16.5.0
-    version: 16.5.0
+    specifier: ^16.6.0-beta.1
+    version: 16.6.0-beta.1
   '@types/memoizee':
     specifier: ^0.4.11
     version: 0.4.11
@@ -797,8 +797,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
 
-  /@lifi/types@16.5.0:
-    resolution: {integrity: sha512-DqDNnVZiyOrtFdn3Jlloni5J2QDnVfHiS5n3bD9qX9l2ISrgp7YBTJRfNGucHfStvegSNSyuG0/THJ4Kh4f08A==}
+  /@lifi/types@16.6.0-beta.1:
+    resolution: {integrity: sha512-5bry/o5wr2h2PBgNecUaihssaHWx1xu+ZpTNMfUQARFUWAbuTCE+EVLp6Ed2xZ0yuULBn4D84K1EQM9LVmepxA==}
     dev: false
 
   /@noble/curves@1.2.0:

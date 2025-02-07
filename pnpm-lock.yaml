@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@lifi/types':
-        specifier: 16.8.0-beta.1
-        version: 16.8.0-beta.1
+        specifier: 16.8.0-beta.2
+        version: 16.8.0-beta.2
       '@types/memoizee':
         specifier: ^0.4.11
         version: 0.4.11
@@ -419,8 +419,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@lifi/types@16.8.0-beta.1':
-    resolution: {integrity: sha512-FDx+TCkKhTC/hF/p69cZyOz3NAkXZ8KmnqJUSQGTe/HbcHThJnK+hcOm3ivtdnglKYPtcBj6AMCYUv6k03RYog==}
+  '@lifi/types@16.8.0-beta.2':
+    resolution: {integrity: sha512-MTFEXNwnIUnRAe4a4lJOqvd4dBKGwCf1huOcLmQ+4LMQq/QcK1ARud8SbEmIElpavaWlnHgQtWFvvu4eAvh3iQ==}
 
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
@@ -3380,7 +3380,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lifi/types@16.8.0-beta.1': {}
+  '@lifi/types@16.8.0-beta.2': {}
 
   '@noble/curves@1.2.0':
     dependencies:

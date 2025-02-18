@@ -1,8 +1,7 @@
 {
   "name": "@lifi/tenderlysim",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Helpers to simulate lifi quotes",
-  "private": true,
   "author": {
     "name": "LI.FI",
     "url": "https://li.fi"
@@ -17,7 +16,7 @@
     "build"
   ],
   "scripts": {
-    "prepare": "pnpm build",
+    "prepare": "husky",
     "build": "tsc --project tsconfig.build.json && pnpm resolve-tspaths",
     "demo": "node -r ts-node/register src/demo.ts",
     "clean": "rm -rf ./build",
@@ -27,12 +26,17 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "check:types": "tsc --noEmit --esModuleInterop",
-    "check:circular-deps": "madge --circular $(find ./src -name '*.ts')"
+    "check:circular-deps": "madge --circular $(find ./src -name '*.ts')",
+    "release": "standard-version -a",
+    "release:beta": "standard-version -a --prerelease beta --skip.changelog"
   },
   "engines": {
     "node": ">=20"
   },
+  "license": "Apache-2.0",
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.13",
     "@types/node": "^20.16.11",
@@ -47,17 +51,19 @@
     "eslint-plugin-jest-formatting": "^3.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-unused-imports": "^3.2.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
     "jest-mock-extended": "^3.0.7",
     "madge": "^6.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^3.2.4",
+    "standard-version": "^9.5.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "5.3.3"
   },
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.15.0",
   "dependencies": {
     "@lifi/types": "16.9.0-beta.1",
     "@types/memoizee": "^0.4.11",

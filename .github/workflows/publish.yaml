@@ -27,20 +27,28 @@ jobs:
           prerelease: false
 
   publish:
-    permissions:
-      contents: write
-      id-token: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+      - name: Setup .npmrc file to publish to npm
+        uses: actions/setup-node@v4
+        with:
+          cache: "pnpm"
+          node-version: lts/*
+          registry-url: "https://registry.npmjs.org"
       - name: Install dependencies
-        uses: ./.github/actions/pnpm-install
+        uses: ./.github/actions/install
       - name: Build
         run: pnpm build
+      - name: Test
+        run: pnpm test
       - name: Publish to npm
         run: |
           pnpm publish --no-git-checks --access public \
           ${{ contains(github.ref_name, 'alpha') && '--tag alpha' || contains(github.ref_name, 'beta') && '--tag beta' || '' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true

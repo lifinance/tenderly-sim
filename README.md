@@ -5,10 +5,10 @@ faking approvals and token balances.
 
 
 ### Integration
-In order to use this package you will need to add this line in your `package.json` using the npm github syntax as follows:
+In order to use this package you will need to add this line in your `package.json` using the npm as follows:
 
-```
-     "@lifi/tenderlysim": "git@github.com:lifinance/tenderly-sim"
+```shell
+    npm i @lifi/tenderlysim
 ```
 
 ### Example usage - Simulate a diamond call
@@ -142,6 +142,6 @@ The supported chains have to be matched between the chains [Tenderly supports](h
 
 - Visit the [Tenderly docs](https://docs.tenderly.co/supported-networks) to see what chains were added
 
-- Add new chains in [./src/tenderly/tenderly.config.ts](./src/tenderly/tenderly.config.ts)
+- Add new chains in [./src/tenderly/tenderly.config.ts](https://github.com/lifinance/tenderly-sim/blob/main/src/tenderly/tenderly.config.ts)
 
 - Push changes as a PR for review

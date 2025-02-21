@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/lifinance/tenderly-sim/compare/v0.0.5...v0.0.6) (2025-02-21)
+
+### [0.0.4-beta.0](https://github.com/lifinance/tenderly-sim/compare/2de775c9f070b396cd2a8cf7c97a19176519492e...v0.0.4-beta.0) (2025-02-18)
+
+
+### Features
+
+* support sonic chain on Tenderly ([2b79998](https://github.com/lifinance/tenderly-sim/commit/2b7999830af0b8a657702d05a0fa9f79607ad4ce))
+
+
+### Bug Fixes
+
+* support sonic chain types ([2de775c](https://github.com/lifinance/tenderly-sim/commit/2de775c9f070b396cd2a8cf7c97a19176519492e))
+
 ### 0.0.5 (2025-02-18)
 
 ### [0.0.3](https://github.com/lifinance/tenderly-sim/compare/v0.0.2...v0.0.3) (2025-02-18)

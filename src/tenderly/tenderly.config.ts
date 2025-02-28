@@ -52,7 +52,8 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.WCC, // WorldChain - 480
   ChainId.LSK, // Lisk - 1135
   ChainId.SON, // Sonic - 146
-  // ChainId.SON, // Sonic - 146
+  ChainId.UNI, // Unichain - 130
+
   // Sei Pacific-1 - 1329
   // ZetaChain - 7000
   // Zora - 7777777

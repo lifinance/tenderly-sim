@@ -54,6 +54,7 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.SON, // Sonic - 146
   ChainId.UNI, // Unichain - 130
   ChainId.APE, // Apechain - 13371
+  ChainId.LNS, // Lens - 232
 
   // Sei Pacific-1 - 1329
   // ZetaChain - 7000

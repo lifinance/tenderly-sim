@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@lifi/types':
-        specifier: ^17.5.0
-        version: 17.5.0(typescript@5.3.3)
+        specifier: ^17.11.0
+        version: 17.11.0(typescript@5.3.3)
       '@types/memoizee':
         specifier: ^0.4.11
         version: 0.4.11
@@ -504,8 +504,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@lifi/types@17.5.0':
-    resolution: {integrity: sha512-AQUEMSp+OJ2PSPyJzpOh6W3ZxVbEj6SqO3Y/2c6/wBNC92Gn4Ej78BSx9Iae8fBiXV8AKJZVPhrqC182N1Rtiw==}
+  '@lifi/types@17.11.0':
+    resolution: {integrity: sha512-NJRMJGj/m1aZXzB0E+wgcN1cxuaS2xRxRzCqgSQ99tjIfyDWzlMdYvs+CH2PbqUh++jRNiUxrFmWMwbPktMPBg==}
 
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
@@ -2758,8 +2758,8 @@ packages:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}
     engines: {node: '>=10'}
 
-  ox@0.6.7:
-    resolution: {integrity: sha512-17Gk/eFsFRAZ80p5eKqv89a57uXjd3NgIf1CaXojATPBuujVc/fQSVhBeAU9JCRB+k7J50WQAyWTxK19T9GgbA==}
+  ox@0.6.9:
+    resolution: {integrity: sha512-wi5ShvzE4eOcTwQVsIPdFr+8ycyX+5le/96iAJutaZAvCes1J0+RvpEPg5QDPDiaR0XQQAvZVl7AwqQcINuUug==}
     peerDependencies:
       typescript: '>=5.4.0'
     peerDependenciesMeta:
@@ -3555,8 +3555,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  viem@2.23.6:
-    resolution: {integrity: sha512-+yUeK8rktbGFQaLIvY4Tki22HUjian9Z4eKGAUT72RF9bcfkYgK8CJZz9P83tgoeLpiTyX3xcBM4xJZrJyKmsA==}
+  viem@2.26.2:
+    resolution: {integrity: sha512-+yXSl1n+jV/Kn/zpETiNq0WOcINXti29nxdPIONvvNh+Es0VfeusW8bb2okVfa55pmuc8kOCOpB5wq3ZIUCTSA==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
@@ -3615,8 +3615,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.18.0:
-    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
+  ws@8.18.1:
+    resolution: {integrity: sha512-RKW2aJZMXeMxVpnZ6bck+RswznaxmzdULiBr6KY7XkTnW8uvt0iT9H5DkHUChXrc+uurzwa0rVI16n/Xzjdz1w==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -4236,9 +4236,9 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lifi/types@17.5.0(typescript@5.3.3)':
+  '@lifi/types@17.11.0(typescript@5.3.3)':
     dependencies:
-      viem: 2.23.6(typescript@5.3.3)
+      viem: 2.26.2(typescript@5.3.3)
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -6177,9 +6177,9 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  isows@1.0.6(ws@8.18.0):
+  isows@1.0.6(ws@8.18.1):
     dependencies:
-      ws: 8.18.0
+      ws: 8.18.1
 
   istanbul-lib-coverage@3.2.2: {}
 
@@ -6913,7 +6913,7 @@ snapshots:
       strip-ansi: 6.0.1
       wcwidth: 1.0.1
 
-  ox@0.6.7(typescript@5.3.3):
+  ox@0.6.9(typescript@5.3.3):
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.8.1
@@ -7718,16 +7718,16 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  viem@2.23.6(typescript@5.3.3):
+  viem@2.26.2(typescript@5.3.3):
     dependencies:
       '@noble/curves': 1.8.1
       '@noble/hashes': 1.7.1
       '@scure/bip32': 1.6.2
       '@scure/bip39': 1.5.4
       abitype: 1.0.8(typescript@5.3.3)
-      isows: 1.0.6(ws@8.18.0)
-      ox: 0.6.7(typescript@5.3.3)
-      ws: 8.18.0
+      isows: 1.0.6(ws@8.18.1)
+      ox: 0.6.9(typescript@5.3.3)
+      ws: 8.18.1
     optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -7784,7 +7784,7 @@ snapshots:
 
   ws@8.17.1: {}
 
-  ws@8.18.0: {}
+  ws@8.18.1: {}
 
   xml@1.0.1: {}
 

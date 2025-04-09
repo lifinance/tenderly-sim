@@ -2,7 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.9](https://github.com/lifinance/tenderly-sim/compare/v0.0.9-beta.2...v0.0.9) (2025-03-04)
+### [0.0.11](https://github.com/lifinance/tenderly-sim/compare/v0.0.7...v0.0.11) (2025-04-09)
+
+
+### Features
+
+* add swell chain ([ff7c426](https://github.com/lifinance/tenderly-sim/commit/ff7c4262349825a7bffa382680edde90255f2686))
+* Add unichain support ([#14](https://github.com/lifinance/tenderly-sim/issues/14)) ([836716e](https://github.com/lifinance/tenderly-sim/commit/836716eb2ea353b313e7bbb955817af2eee1b210))
+* **chains:** add apechain to tenderly config ([#16](https://github.com/lifinance/tenderly-sim/issues/16)) ([91e098c](https://github.com/lifinance/tenderly-sim/commit/91e098c74bff1ab1888641a0bbd520cb7d8ed3c3))
+* update @lifi/types to 17.8.0 ([#18](https://github.com/lifinance/tenderly-sim/issues/18)) ([ec6cb03](https://github.com/lifinance/tenderly-sim/commit/ec6cb036349df6704239463ed70d4d0b507f264e))
+
+### [0.0.10](https://github.com/lifinance/tenderly-sim/compare/v0.0.7...v0.0.10) (2025-03-21)
+
+
+### Features
+
+* Add unichain support ([#14](https://github.com/lifinance/tenderly-sim/issues/14)) ([836716e](https://github.com/lifinance/tenderly-sim/commit/836716eb2ea353b313e7bbb955817af2eee1b210))
+* **chains:** add apechain to tenderly config ([#16](https://github.com/lifinance/tenderly-sim/issues/16)) ([91e098c](https://github.com/lifinance/tenderly-sim/commit/91e098c74bff1ab1888641a0bbd520cb7d8ed3c3))
+* update @lifi/types to 17.8.0 ([f0362df](https://github.com/lifinance/tenderly-sim/commit/f0362dfed9ca16efd4b0f988a190a2112f5464aa))
+
+
+### Bug Fixes
+
+* add blank ([a6cf185](https://github.com/lifinance/tenderly-sim/commit/a6cf185aa131b4b3edf6565db5773b6777b147a3))
+* update version ([fbf091b](https://github.com/lifinance/tenderly-sim/commit/fbf091b939eca1888057f8a33a836bd8b66c7c3e))
 
 ### [0.0.8](https://github.com/lifinance/tenderly-sim/compare/v0.0.4-beta.3...v0.0.8) (2025-02-28)
 

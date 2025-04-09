@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/lifinance/tenderly-sim/compare/v0.0.7...v0.0.13) (2025-04-09)
+
+
+### Features
+
+* add Corn ([164e5ca](https://github.com/lifinance/tenderly-sim/commit/164e5ca605a86458767782a3b536f8129e481e7e))
+* add Ink support ([#17](https://github.com/lifinance/tenderly-sim/issues/17)) ([252fc01](https://github.com/lifinance/tenderly-sim/commit/252fc01975b72582b565659204f20d4432a47bc0))
+* add swell chain ([#20](https://github.com/lifinance/tenderly-sim/issues/20)) ([a447601](https://github.com/lifinance/tenderly-sim/commit/a447601f8d8d5926620b3da168526b0a9146cc00))
+* Add unichain support ([#14](https://github.com/lifinance/tenderly-sim/issues/14)) ([836716e](https://github.com/lifinance/tenderly-sim/commit/836716eb2ea353b313e7bbb955817af2eee1b210))
+* **chains:** add apechain to tenderly config ([#16](https://github.com/lifinance/tenderly-sim/issues/16)) ([91e098c](https://github.com/lifinance/tenderly-sim/commit/91e098c74bff1ab1888641a0bbd520cb7d8ed3c3))
+* update @lifi/types to 17.8.0 ([#18](https://github.com/lifinance/tenderly-sim/issues/18)) ([ec6cb03](https://github.com/lifinance/tenderly-sim/commit/ec6cb036349df6704239463ed70d4d0b507f264e))
+
 ### [0.0.12](https://github.com/lifinance/tenderly-sim/compare/v0.0.9...v0.0.12) (2025-04-09)
 
 

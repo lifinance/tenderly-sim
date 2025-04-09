@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/lifinance/tenderly-sim/compare/v0.0.9...v0.0.12) (2025-04-09)
+
+
+### Features
+
+* add swell chain ([#20](https://github.com/lifinance/tenderly-sim/issues/20)) ([a447601](https://github.com/lifinance/tenderly-sim/commit/a447601f8d8d5926620b3da168526b0a9146cc00))
+* update @lifi/types to 17.8.0 ([#18](https://github.com/lifinance/tenderly-sim/issues/18)) ([ec6cb03](https://github.com/lifinance/tenderly-sim/commit/ec6cb036349df6704239463ed70d4d0b507f264e))
+
 ### [0.0.11](https://github.com/lifinance/tenderly-sim/compare/v0.0.7...v0.0.11) (2025-04-09)
 
 

@@ -57,6 +57,7 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.INK, // Ink - 57073
   ChainId.SWL, // Swellchain - 1923
   ChainId.CRN, // Corn - 21000000
+  ChainId.BOC, // BOB - 60808
 
   // Sei Pacific-1 - 1329
   // ZetaChain - 7000

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/lifinance/tenderly-sim/compare/v0.0.14...v0.0.15) (2025-05-22)
+
+
+### Features
+
+* add bob ([#26](https://github.com/lifinance/tenderly-sim/issues/26)) ([926ed5f](https://github.com/lifinance/tenderly-sim/commit/926ed5f950c6d50adb28d9117ce2dbf2a1e7674f))
+* add implemenation contract for tokens USDC & TAIKO on Taiko ([b950c56](https://github.com/lifinance/tenderly-sim/commit/b950c56dfcd7a0774530deede44306d279da9c53))
+
 ### [0.0.14](https://github.com/lifinance/tenderly-sim/compare/v0.0.7...v0.0.14) (2025-04-17)
 
 

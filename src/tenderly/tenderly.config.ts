@@ -57,6 +57,7 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.INK, // Ink - 57073
   ChainId.SWL, // Swellchain - 1923
   ChainId.CRN, // Corn - 21000000
+  ChainId.BOC, // BOB - 60808
 
   // Sei Pacific-1 - 1329
   // ZetaChain - 7000
@@ -157,6 +158,12 @@ export const knownProxyTokens: Record<
     '0x176211869ca2b568f2a7d4ee941e073a821ee1ff':
       '0xab838fe7d492c621a5b1b23952af99cc37a2e0d3',
   },
+  [ChainId.TAI]:{
+    '0x07d83526730c7438048d55a4fc0b850e2aab6f0b':
+      '0x996a7a32c387fd83e127a358fbc192e110459f2d',
+    '0xa9d23408b9ba935c230493c40c73824df71a0975':
+      '0x71583f1ba66f292f6c626f37e25c438b152dd917',
+  }
 }
 
 export const knownFailingTokens: Record<number, Lowercase<string>[]> = {

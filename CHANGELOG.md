@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/lifinance/tenderly-sim/compare/v0.0.15...v0.0.16) (2025-06-10)
+
+
+### Features
+
+* add flare ([#27](https://github.com/lifinance/tenderly-sim/issues/27)) ([047154e](https://github.com/lifinance/tenderly-sim/commit/047154ee56d337eb118644dd1791be1af7a9b63d))
+
 ### [0.0.15](https://github.com/lifinance/tenderly-sim/compare/v0.0.14...v0.0.15) (2025-05-22)
 
 

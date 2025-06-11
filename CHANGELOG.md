@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/lifinance/tenderly-sim/compare/v0.0.16...v0.0.17) (2025-06-11)
+
+
+### Features
+
+* add scroll chain support ([#28](https://github.com/lifinance/tenderly-sim/issues/28)) ([59fda27](https://github.com/lifinance/tenderly-sim/commit/59fda27953a56d66621796c5f8830b5585d16d5c))
+
 ### [0.0.16](https://github.com/lifinance/tenderly-sim/compare/v0.0.15...v0.0.16) (2025-06-10)
 
 

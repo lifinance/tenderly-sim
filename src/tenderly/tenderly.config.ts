@@ -58,6 +58,8 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.SWL, // Swellchain - 1923
   ChainId.CRN, // Corn - 21000000
   ChainId.BOC, // BOB - 60808
+  ChainId.FLR, // Flare - 14
+  ChainId.SCL, // Scroll - 534352
 
   // Sei Pacific-1 - 1329
   // ZetaChain - 7000
@@ -163,7 +165,11 @@ export const knownProxyTokens: Record<
       '0x996a7a32c387fd83e127a358fbc192e110459f2d',
     '0xa9d23408b9ba935c230493c40c73824df71a0975':
       '0x71583f1ba66f292f6c626f37e25c438b152dd917',
-  }
+  },
+  [ChainId.SCL]: {
+    '0x06efdbff2a14a7c8e15944d1f4a48f9f95f663a4':
+      '0x72e2451a2da1535dbf0e7cb1e8c69f56e00a7b7b',
+  },
 }
 
 export const knownFailingTokens: Record<number, Lowercase<string>[]> = {
@@ -193,6 +199,9 @@ export const knownFailingTokens: Record<number, Lowercase<string>[]> = {
   ],
   [ChainId.MNT]: [
     '0x09bc4e0d864854c6afb6eb9a9cdf58ac190d0df9', // Tenderly can't find proxy implementation
+  ],
+  [ChainId.SCL]: [
+    '0xca77eb3fefe3725dc33bccb54edefc3d9f764f97', // DAI, proxy does not work
   ],
 }
 

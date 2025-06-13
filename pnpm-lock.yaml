@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@lifi/types':
-        specifier: ^17.19.0-beta.0
-        version: 17.19.0-beta.0(typescript@5.3.3)
+        specifier: ^17.19.0-beta.1
+        version: 17.19.0-beta.1(typescript@5.3.3)
       '@types/memoizee':
         specifier: ^0.4.11
         version: 0.4.11
@@ -504,8 +504,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@lifi/types@17.19.0-beta.0':
-    resolution: {integrity: sha512-lcNjqmw/YkfnKFeJU39pk7q0HPv61Xq9nC0zUS2R9q6gyoD/7sF1JLw6zwlA0PpcigaYo1f7RPCkuHGxM1VU6Q==}
+  '@lifi/types@17.19.0-beta.1':
+    resolution: {integrity: sha512-RmTFK4Wspi2Ccn6Tldrukt/qF8XcdyFcwtbyRCKR+2CQipEWASitLNkRkzpNYWPKdjpADjs/yeg7dSY4+CDGHg==}
 
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
@@ -4236,7 +4236,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lifi/types@17.19.0-beta.0(typescript@5.3.3)':
+  '@lifi/types@17.19.0-beta.1(typescript@5.3.3)':
     dependencies:
       viem: 2.26.2(typescript@5.3.3)
     transitivePeerDependencies:

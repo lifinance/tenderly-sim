@@ -1,6 +1,6 @@
 {
   "name": "@lifi/tenderlysim",
-  "version": "0.0.20-beta.1",
+  "version": "0.0.20-beta.2",
   "description": "Helpers to simulate lifi quotes",
   "author": {
     "name": "LI.FI",

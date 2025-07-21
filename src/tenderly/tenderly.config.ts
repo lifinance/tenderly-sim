@@ -60,8 +60,14 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.BOC, // BOB - 60808
   ChainId.FLR, // Flare - 14
   ChainId.SCL, // Scroll - 534352
+  ChainId.SOE, // Soneium - 1868
+  ChainId.SEI, // Sei Pacific-1 - 1329
+  ChainId.BER, // berachain - 80094
+  ChainId.MAM, // metis - 1088
+  ChainId.LNS, // Lens - 232
+  ChainId.KAT, // Katana - 747474
+  ChainId.ERA, // zksync - 324
 
-  // Sei Pacific-1 - 1329
   // ZetaChain - 7000
   // Zora - 7777777
 ]

@@ -67,7 +67,8 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.LNS, // Lens - 232
   ChainId.KAT, // Katana - 747474
   ChainId.ERA, // zksync - 324
-
+  ChainId.RON, // Ronin - 2020
+  
   // ZetaChain - 7000
   // Zora - 7777777
 ]

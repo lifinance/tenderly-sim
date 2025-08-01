@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.23](https://github.com/lifinance/tenderly-sim/compare/v0.0.22...v0.0.23) (2025-08-01)
+
+
+### Features
+
+* add Ronin chain support ([#34](https://github.com/lifinance/tenderly-sim/issues/34)) ([b5f745c](https://github.com/lifinance/tenderly-sim/commit/b5f745cbdf30038472819a9d28501d9c5fbe4d61))
+
 ### [0.0.22](https://github.com/lifinance/tenderly-sim/compare/v0.0.21...v0.0.22) (2025-07-24)
 
 ### [0.0.21](https://github.com/lifinance/tenderly-sim/compare/v0.0.20...v0.0.21) (2025-07-21)

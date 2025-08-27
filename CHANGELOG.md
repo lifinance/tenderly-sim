@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/lifinance/tenderly-sim/compare/v0.0.27...v0.0.28) (2025-08-27)
+
+
+### Features
+
+* Update types 17.33 ([#40](https://github.com/lifinance/tenderly-sim/issues/40)) ([421bb80](https://github.com/lifinance/tenderly-sim/commit/421bb80917bab89f9db2ead5430248e55e14d45b))
+
 ### [0.0.27](https://github.com/lifinance/tenderly-sim/compare/v0.0.26...v0.0.27) (2025-08-22)
 
 

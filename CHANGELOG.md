@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.30](https://github.com/lifinance/tenderly-sim/compare/v0.0.29...v0.0.30) (2025-08-28)
+
+
+### Features
+
+* update @lifi/types to 17.35.0 ([#43](https://github.com/lifinance/tenderly-sim/issues/43)) ([a4305e5](https://github.com/lifinance/tenderly-sim/commit/a4305e530c61eca1b9c4ea2f3be58cef0e85549d))
+
 ### [0.0.29](https://github.com/lifinance/tenderly-sim/compare/v0.0.28...v0.0.29) (2025-08-27)
 
 

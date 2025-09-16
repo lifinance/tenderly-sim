@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.32](https://github.com/lifinance/tenderly-sim/compare/v0.0.31...v0.0.32) (2025-09-16)
+
+
+### Features
+
+* add plasma to tenderly config ([#44](https://github.com/lifinance/tenderly-sim/issues/44)) ([45afaa0](https://github.com/lifinance/tenderly-sim/commit/45afaa06336745f4c21914733ccf52d278d5b6a7))
+
 ### [0.0.31](https://github.com/lifinance/tenderly-sim/compare/v0.0.30...v0.0.31) (2025-08-29)
 
 ### [0.0.26-beta.0](https://github.com/lifinance/tenderly-sim/compare/v0.0.25...v0.0.26-beta.0) (2025-08-21)

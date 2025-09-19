@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.33](https://github.com/lifinance/tenderly-sim/compare/v0.0.32...v0.0.33) (2025-09-19)
+
+
+### Features
+
+* support plume chain ([#45](https://github.com/lifinance/tenderly-sim/issues/45)) ([a2fbdb2](https://github.com/lifinance/tenderly-sim/commit/a2fbdb2f46b6d0d32f18929885f628ad6d251f37))
+
 ### [0.0.32](https://github.com/lifinance/tenderly-sim/compare/v0.0.31...v0.0.32) (2025-09-16)
 
 

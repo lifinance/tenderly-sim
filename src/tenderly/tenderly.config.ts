@@ -70,6 +70,7 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.RON, // Ronin - 2020
   ChainId.SOP, // Sophon - 50104
   ChainId.PLA, // Plasma - 9746
+  ChainId.PLU, // Plume - 98866
 
   // ZetaChain - 7000
   // Zora - 7777777

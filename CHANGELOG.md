@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.34](https://github.com/lifinance/tenderly-sim/compare/v0.0.33...v0.0.34) (2025-09-25)
+
+
+### Features
+
+* update @lifi/types to 17.38.0 ([#46](https://github.com/lifinance/tenderly-sim/issues/46)) ([db05035](https://github.com/lifinance/tenderly-sim/commit/db0503577c457bc46c72d675f78ccfe8ae537ee5))
+
+### [0.0.33](https://github.com/lifinance/tenderly-sim/compare/v0.0.32...v0.0.33) (2025-09-19)
+
+
+### Features
+
+* support plume chain ([#45](https://github.com/lifinance/tenderly-sim/issues/45)) ([a2fbdb2](https://github.com/lifinance/tenderly-sim/commit/a2fbdb2f46b6d0d32f18929885f628ad6d251f37))
+
+### [0.0.32](https://github.com/lifinance/tenderly-sim/compare/v0.0.31...v0.0.32) (2025-09-16)
+
+
+### Features
+
+* add plasma to tenderly config ([#44](https://github.com/lifinance/tenderly-sim/issues/44)) ([45afaa0](https://github.com/lifinance/tenderly-sim/commit/45afaa06336745f4c21914733ccf52d278d5b6a7))
+
 ### [0.0.31](https://github.com/lifinance/tenderly-sim/compare/v0.0.30...v0.0.31) (2025-08-29)
 
 ### [0.0.26-beta.0](https://github.com/lifinance/tenderly-sim/compare/v0.0.25...v0.0.26-beta.0) (2025-08-21)

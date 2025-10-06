@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.37](https://github.com/lifinance/tenderly-sim/compare/v0.0.34...v0.0.37) (2025-10-06)
+
+
+### Features
+
+* add hemi chain and update types ([#48](https://github.com/lifinance/tenderly-sim/issues/48)) ([f6132be](https://github.com/lifinance/tenderly-sim/commit/f6132be601e62864fb759631facf5ee177a72519))
+* correct version ([#49](https://github.com/lifinance/tenderly-sim/issues/49)) ([f566b06](https://github.com/lifinance/tenderly-sim/commit/f566b069900070c162ff8627fb20fb089e2692a4))
+
 ### [0.0.34](https://github.com/lifinance/tenderly-sim/compare/v0.0.33...v0.0.34) (2025-09-25)
 
 

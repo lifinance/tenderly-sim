@@ -1,6 +1,6 @@
 {
   "name": "@lifi/tenderlysim",
-  "version": "0.0.40-beta.0",
+  "version": "0.0.40-beta.1",
   "description": "Helpers to simulate lifi quotes",
   "author": {
     "name": "LI.FI",
@@ -58,10 +58,12 @@
     "madge": "^6.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^3.2.4",
+    "resolve-tspaths": "^0.8.22",
     "standard-version": "^9.5.0",
+    "tsconfig-paths": "^4.2.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "5.3.3"
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@9.15.0",
   "dependencies": {
@@ -70,8 +72,6 @@
     "axios": "^1.7.7",
     "ethers": "^6.13.3",
     "memoizee": "^0.4.17",
-    "pino": "^9.4.0",
-    "resolve-tspaths": "^0.8.22",
-    "tsconfig-paths": "^4.2.0"
+    "pino": "^9.4.0"
   }
 }

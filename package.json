@@ -65,7 +65,7 @@
   },
   "packageManager": "pnpm@10.14.0",
   "dependencies": {
-    "@lifi/types": "^v17.50.0",
+    "@lifi/types": "^v17.54.0-beta.1",
     "@types/memoizee": "^0.4.11",
     "axios": "^1.7.7",
     "ethers": "^6.13.3",

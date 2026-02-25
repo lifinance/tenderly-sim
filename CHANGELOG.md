@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.48](https://github.com/lifinance/tenderly-sim/compare/v0.0.47...v0.0.48) (2026-02-25)
+
+
+### Features
+
+* add fogo chain ([#63](https://github.com/lifinance/tenderly-sim/issues/63)) ([39aa280](https://github.com/lifinance/tenderly-sim/commit/39aa28003f42b117fe87dc2579df8e0dc6df0aeb))
+
 ### [0.0.47](https://github.com/lifinance/tenderly-sim/compare/v0.0.46...v0.0.47) (2026-02-25)
 
 

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.58](https://github.com/lifinance/tenderly-sim/compare/v0.0.57...v0.0.58) (2026-04-01)
+
+
+### Features
+
+* add custom solana priority fees ([#74](https://github.com/lifinance/tenderly-sim/issues/74)) ([60bf4d4](https://github.com/lifinance/tenderly-sim/commit/60bf4d44fdd203208b849c4906182b2f5d16ff97))
+
 ### [0.0.57](https://github.com/lifinance/tenderly-sim/compare/v0.0.56...v0.0.57) (2026-04-01)
 
 

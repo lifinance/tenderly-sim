@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.57](https://github.com/lifinance/tenderly-sim/compare/v0.0.56...v0.0.57) (2026-04-01)
+
+
+### Features
+
+* add new chains Base Sepolia and Arbitrum Sepolia ([9e2c0aa](https://github.com/lifinance/tenderly-sim/commit/9e2c0aa20d235f75db1772c1e819739e18aabde3))
+
 ### [0.0.56](https://github.com/lifinance/tenderly-sim/compare/v0.0.55...v0.0.56) (2026-03-30)
 
 ### [0.0.55](https://github.com/lifinance/tenderly-sim/compare/v0.0.54...v0.0.55) (2026-03-26)

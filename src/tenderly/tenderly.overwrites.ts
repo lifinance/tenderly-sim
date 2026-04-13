@@ -18,23 +18,26 @@ import {
 } from './tenderly.config'
 import { State } from './tenderly.types.contract'
 
+const extractStates = (
+  contract: Awaited<ReturnType<typeof getPublicTokenContract>>
+): State[] | undefined => contract?.data?.states
+
 const _getContractStates =
   (tenderlyConfig: TenderlyConfig) =>
   async (
     chainId: ChainId,
     tokenAddress: string
   ): Promise<State[] | undefined> => {
-    let tokenContract = await getPublicTokenContract(chainId, tokenAddress)
-
-    // try project contract as fallback
-    if (tokenContract?.data?.states === undefined) {
-      tokenContract = await getTokenContract(tenderlyConfig)(
-        chainId,
-        tokenAddress
-      )
+    const publicStates = extractStates(
+      await getPublicTokenContract(chainId, tokenAddress)
+    )
+    if (publicStates !== undefined) {
+      return publicStates
     }
 
-    return tokenContract?.data?.states
+    return extractStates(
+      await getTokenContract(tenderlyConfig)(chainId, tokenAddress)
+    )
   }
 
 const getContractStates = memoizee(_getContractStates, {
@@ -117,6 +120,12 @@ const getBalanceMapping = (
   }
 }
 
+const getImplementationAddress = (
+  chainId: number,
+  tokenAddress: Lowercase<string>
+): Lowercase<string> =>
+  knownProxyTokens[chainId]?.[tokenAddress] ?? tokenAddress
+
 export const getTokenOverwrite =
   (tenderlyConfig: TenderlyConfig) =>
   async (params: {
@@ -130,13 +139,10 @@ export const getTokenOverwrite =
       return {}
     }
 
-    // use proxy implementation if available
-    let tokenImplementationAddress =
+    const tokenImplementationAddress = getImplementationAddress(
+      params.chainId,
       params.tokenAddress.toLowerCase() as Lowercase<string>
-    if (knownProxyTokens[params.chainId]?.[tokenImplementationAddress]) {
-      tokenImplementationAddress =
-        knownProxyTokens[params.chainId][tokenImplementationAddress]
-    }
+    )
 
     const contractStates = await getContractStates(tenderlyConfig)(
       params.chainId,

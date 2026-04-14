@@ -1,8 +1,8 @@
-import type { Config } from '@jest/types'
+import type { Config } from 'jest'
 
 import jestConfig from './jest.config'
 
-const config: Config.InitialOptions = {
+const config: Config = {
   ...jestConfig,
   testMatch: ['**/*.unit.spec.ts'],
 }

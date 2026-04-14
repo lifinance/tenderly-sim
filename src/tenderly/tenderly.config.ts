@@ -2,17 +2,17 @@ import { ChainId } from '@lifi/types'
 
 export const TENDERLY_BASE_URL = 'https://api.tenderly.co/api/v1/'
 export const TENDERLY_REQUEST_HEADERS = (accessKey: string) => ({
-  'X-Access-Key': accessKey
+  'X-Access-Key': accessKey,
 })
 
 export type TenderlyConfig = {
-  accessKey: string,
-  user: string,
-  project: string,
+  accessKey: string
+  user: string
+  project: string
 }
 
 export const projectBaseUrl = (tenderlyConfig: TenderlyConfig) =>
-   `${TENDERLY_BASE_URL}account/${tenderlyConfig.user}/project/${tenderlyConfig.project}`
+  `${TENDERLY_BASE_URL}account/${tenderlyConfig.user}/project/${tenderlyConfig.project}`
 
 // Supported networks, order as in the tenderly docs (excluding testnets)
 // https://docs.tenderly.co/supported-networks
@@ -170,7 +170,7 @@ export const knownProxyTokens: Record<
     '0x176211869ca2b568f2a7d4ee941e073a821ee1ff':
       '0xab838fe7d492c621a5b1b23952af99cc37a2e0d3',
   },
-  [ChainId.TAI]:{
+  [ChainId.TAI]: {
     '0x07d83526730c7438048d55a4fc0b850e2aab6f0b':
       '0x996a7a32c387fd83e127a358fbc192e110459f2d',
     '0xa9d23408b9ba935c230493c40c73824df71a0975':

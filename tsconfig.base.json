@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "ignoreDeprecations": "6.0",
     "target": "es2022",
     "module": "commonjs",
     "outDir": "./build",
@@ -17,6 +18,7 @@
     "strictFunctionTypes": true,
     "skipLibCheck": true,
     "strict": true,
+    "types": ["jest", "node"],
     "allowJs": false,
     "checkJs": false,
     "declaration": true,
@@ -25,7 +27,7 @@
       "@tenderlysim/*": ["./*"]
     }
   },
-  "include": ["src/**/*", "./.eslintrc.js"],
+  "include": ["src/**/*"],
   "ts-node": {
     "require": ["tsconfig-paths/register"]
   }

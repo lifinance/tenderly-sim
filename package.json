@@ -6,6 +6,10 @@
     "name": "LI.FI",
     "url": "https://li.fi"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifinance/tenderly-sim"
+  },
   "module": "./build/src/index.js",
   "types": "./build/src/index.d.ts",
   "exports": {

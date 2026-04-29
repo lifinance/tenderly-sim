@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.62](https://github.com/lifinance/tenderly-sim/compare/v0.0.61...v0.0.62) (2026-04-29)
+
+
+### Features
+
+* add new chain Lighter ([#78](https://github.com/lifinance/tenderly-sim/issues/78)) ([814b359](https://github.com/lifinance/tenderly-sim/commit/814b359879a3da2e5568005640e0e472c3718f30))
+
 ### [0.0.61](https://github.com/lifinance/tenderly-sim/compare/v0.0.60...v0.0.61) (2026-04-15)
 
 ### [0.0.60](https://github.com/lifinance/tenderly-sim/compare/v0.0.59...v0.0.60) (2026-04-15)

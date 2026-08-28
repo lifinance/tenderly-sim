@@ -1,6 +1,6 @@
 {
   "name": "@lifi/tenderlysim",
-  "version": "0.0.65",
+  "version": "0.0.66",
   "description": "Helpers to simulate lifi quotes",
   "author": {
     "name": "LI.FI",
@@ -69,7 +69,7 @@
   },
   "packageManager": "pnpm@10.14.0",
   "dependencies": {
-    "@lifi/types": "17.86.0",
+    "@lifi/types": "18.4.0",
     "@types/memoizee": "^0.4.12",
     "axios": "^1.15.0",
     "ethers": "^6.16.0",

@@ -71,7 +71,7 @@
   "dependencies": {
     "@lifi/types": "18.4.0",
     "@types/memoizee": "^0.4.12",
-    "axios": "^1.15.0",
+    "axios": "^1.18.0",
     "ethers": "^6.16.0",
     "memoizee": "^0.4.17",
     "pino": "^10.3.1",

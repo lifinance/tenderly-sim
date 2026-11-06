@@ -1,8 +1,7 @@
 import { ChainId, ErrorCode } from '@lifi/types'
-
+import { LifiError, getErrorMessage, isLifiError } from '@tenderlysim/common'
 import { HttpResponse, http } from '@tenderlysim/http'
 import { logger } from '@tenderlysim/logger'
-import { LifiError, getErrorMessage, isLifiError } from '@tenderlysim/common'
 
 import {
   TENDERLY_BASE_URL,
@@ -12,13 +11,13 @@ import {
   projectBaseUrl,
 } from './tenderly.config'
 import {
-  TenderlyContract,
-  TenderlyProjectContract,
-} from './tenderly.types.contract'
-import {
   TenderlySimulationResponse,
   TenderlyTransactionResponse,
 } from './tenderly.types'
+import {
+  TenderlyContract,
+  TenderlyProjectContract,
+} from './tenderly.types.contract'
 
 export const getTokenContract =
   (tenderlyConfig: TenderlyConfig) =>

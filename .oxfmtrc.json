@@ -7,26 +7,12 @@
   "trailingComma": "es5",
   "sortImports": {
     "groups": [
-      [
-        "builtin",
-        "external"
-      ],
-      [
-        "internal",
-        "parent",
-        "type"
-      ],
-      [
-        "sibling",
-        "index"
-      ]
+      ["builtin", "external"],
+      ["internal", "parent", "type"],
+      ["sibling", "index"]
     ],
     "newlinesBetween": true
   },
   "sortPackageJson": false,
-  "ignorePatterns": [
-    ".github",
-    "pnpm-lock.yaml",
-    "CHANGELOG.md"
-  ]
+  "ignorePatterns": [".github", "pnpm-lock.yaml", "CHANGELOG.md"]
 }

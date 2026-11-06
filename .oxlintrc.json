@@ -1,29 +1,17 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "typescript",
-    "import",
-    "jest"
-  ],
+  "plugins": ["typescript", "import", "jest"],
   "env": {
     "es2022": true,
     "node": true
   },
-  "ignorePatterns": [
-    "build/**",
-    ".github/**",
-    "*.config.js",
-    "*.config.ts"
-  ],
+  "ignorePatterns": ["build/**", ".github/**", "*.config.js", "*.config.ts"],
   "rules": {
     "typescript/no-misused-promises": "error",
     "typescript/no-floating-promises": "error",
     "no-negated-condition": "error",
     "no-console": "error",
-    "typescript/return-await": [
-      "error",
-      "never"
-    ],
+    "typescript/return-await": ["error", "never"],
     "typescript/no-explicit-any": "off",
     "typescript/no-non-null-assertion": "off",
     "typescript/unbound-method": "error",
@@ -96,9 +84,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.spec.ts"
-      ],
+      "files": ["**/*.spec.ts"],
       "env": {
         "jest": true
       },
@@ -119,9 +105,7 @@
         "jest/prefer-lowercase-title": [
           "error",
           {
-            "ignore": [
-              "describe"
-            ]
+            "ignore": ["describe"]
           }
         ],
         "jest/max-expects": [

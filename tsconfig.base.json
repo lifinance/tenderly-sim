@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "ignoreDeprecations": "6.0",
     "target": "es2022",
     "module": "commonjs",
@@ -24,7 +23,7 @@
     "declaration": true,
     "declarationMap": true,
     "paths": {
-      "@tenderlysim/*": ["./*"]
+      "@tenderlysim/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"],

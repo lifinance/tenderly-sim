@@ -12,7 +12,7 @@ import {
 import { getTokenOverwrite } from './tenderly.overwrites'
 
 // TODO: improve code quality
-/* eslint-disable complexity, max-lines-per-function */
+/* oxlint-disable complexity, max-lines-per-function */
 
 const validateTransactionRequest = (
   transactionRequest?: TransactionRequest

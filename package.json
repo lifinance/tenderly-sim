@@ -55,8 +55,8 @@
     "eslint-plugin-unused-imports": "^4.4.1",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
-    "jest": "^30.3.0",
-    "jest-junit": "^16.0.0",
+    "jest": "^30.5.2",
+    "jest-junit": "^17.0.0",
     "jest-mock-extended": "^4.0.0",
     "madge": "^8.0.0",
     "prettier": "^3.8.2",
@@ -71,11 +71,17 @@
   "dependencies": {
     "@lifi/types": "18.15.0",
     "@types/memoizee": "^0.4.12",
-    "axios": "^1.15.0",
-    "ethers": "^6.16.0",
+    "axios": "^1.20.0",
+    "ethers": "^6.17.0",
     "memoizee": "^0.4.17",
     "pino": "^10.3.1",
     "resolve-tspaths": "^0.8.23",
     "tsconfig-paths": "^4.2.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "glob@>=10 <14.0.2": "^14.0.2",
+      "minimatch@>=9 <11.0.1": "^11.0.1"
+    }
   }
 }

@@ -37,7 +37,7 @@ export const TENDERLY_CHAINS: number[] = [
   // Polynomial - 8008
   // Real - 111188
   // Soneium Minato - 1946
-  ChainId.TAI, // Taiko Mainnet - 167000
+  // Taiko Mainnet - 167000
   // Unreal - 18233
   ChainId.AVA, // Avalanche C-Chain - 43114
   ChainId.BSC, // BNB - 56
@@ -55,8 +55,8 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.UNI, // Unichain - 130
   ChainId.APE, // Apechain - 13371
   ChainId.INK, // Ink - 57073
-  ChainId.SWL, // Swellchain - 1923
-  ChainId.CRN, // Corn - 21000000
+  // Swellchain - 1923
+  // Corn - 21000000
   ChainId.BOC, // BOB - 60808
   ChainId.FLR, // Flare - 14
   ChainId.SCL, // Scroll - 534352
@@ -68,7 +68,7 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.KAT, // Katana - 747474
   ChainId.ERA, // zksync - 324
   ChainId.RON, // Ronin - 2020
-  ChainId.SOP, // Sophon - 50104
+  // Sophon - 50104
   ChainId.PLA, // Plasma - 9746
   ChainId.PLU, // Plume - 98866
 
@@ -169,12 +169,6 @@ export const knownProxyTokens: Record<
       '0xc0583e2f5930ede5fab9d57bac4169878730b010',
     '0x176211869ca2b568f2a7d4ee941e073a821ee1ff':
       '0xab838fe7d492c621a5b1b23952af99cc37a2e0d3',
-  },
-  [ChainId.TAI]: {
-    '0x07d83526730c7438048d55a4fc0b850e2aab6f0b':
-      '0x996a7a32c387fd83e127a358fbc192e110459f2d',
-    '0xa9d23408b9ba935c230493c40c73824df71a0975':
-      '0x71583f1ba66f292f6c626f37e25c438b152dd917',
   },
   [ChainId.SCL]: {
     '0x06efdbff2a14a7c8e15944d1f4a48f9f95f663a4':

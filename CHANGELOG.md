@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.69](https://github.com/lifinance/tenderly-sim/compare/v0.0.68...v0.0.69) (2026-11-12)
+
+
+### Bug Fixes
+
+* **deps:** bump vulnerable dependencies (EXBE-741) ([#98](https://github.com/lifinance/tenderly-sim/issues/98)) ([5d3c56d](https://github.com/lifinance/tenderly-sim/commit/5d3c56d7667fcf48f3a4e4bb08ded84000b94ba6))
+
 ### [0.0.68](https://github.com/lifinance/tenderly-sim/compare/v0.0.67...v0.0.68) (2026-11-03)
 
 ### [0.0.67](https://github.com/lifinance/tenderly-sim/compare/v0.0.66...v0.0.67) (2026-08-28)

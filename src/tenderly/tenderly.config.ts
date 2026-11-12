@@ -23,9 +23,9 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.ARB, // Arbitrum One - 42161
   // BOB - 60808
   ChainId.BAS, // Base Mainnet - 8453
-  ChainId.BLS, // Blast - 81457
+  // Blast - 81457
   // Boba BNB - 56288
-  ChainId.BOB, // Boba Ethereum - 288
+  // Boba Ethereum - 288
   // Curtis - 33111
   ChainId.FRA, // Fraxtal - 252
   // Gold - 4653
@@ -46,25 +46,24 @@ export const TENDERLY_CHAINS: number[] = [
   ChainId.LNA, // Linea - 59144
   ChainId.MNT, // Mantle - 5000
   // Moonbase Alpha - 1287
-  ChainId.MOO, // Moonbeam - 1284
+  // Moonbeam - 1284
   ChainId.MOR, // Moonriver - 1285
   ChainId.RSK, // RSK - 30
   ChainId.WCC, // WorldChain - 480
-  ChainId.LSK, // Lisk - 1135
+  // Lisk - 1135
   ChainId.SON, // Sonic - 146
   ChainId.UNI, // Unichain - 130
   ChainId.APE, // Apechain - 13371
   ChainId.INK, // Ink - 57073
   // Swellchain - 1923
   // Corn - 21000000
-  ChainId.BOC, // BOB - 60808
   ChainId.FLR, // Flare - 14
   ChainId.SCL, // Scroll - 534352
   ChainId.SOE, // Soneium - 1868
   ChainId.SEI, // Sei Pacific-1 - 1329
   ChainId.BER, // berachain - 80094
   ChainId.MAM, // metis - 1088
-  ChainId.LNS, // Lens - 232
+  // Lens - 232
   ChainId.KAT, // Katana - 747474
   ChainId.ERA, // zksync - 324
   ChainId.RON, // Ronin - 2020

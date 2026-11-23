@@ -1,10 +1,11 @@
 ## Tenderly simulations
+
 This package makes it easier to interact with Tenderly API for simulating transactions.
 It exposes functions to gather transaction information, simulate transactions and apply overrides such as
 faking approvals and token balances.
 
-
 ### Integration
+
 In order to use this package you will need to add this line in your `package.json` using the npm as follows:
 
 ```shell
@@ -14,32 +15,32 @@ In order to use this package you will need to add this line in your `package.jso
 ### Example usage - Simulate a diamond call
 
 ```typescript
-  const quote = await http()
-    .get<LiFiStep>(
-      'https://li.quest/v1/quote?fromChain=POL&fromAmount=1000000&fromToken=USDC&fromAddress=0x552008c0f6870c2f77e5cC1d2eb9bdff03e30Ea0&toChain=POL&toToken=DAI&integrator=postman&slippage=0.03'
-    )
-    .then((q) => q.data)
-
-  const config: TenderlyConfig = {
-    accessKey: '---',
-    user: 'LiFi',
-    project: 'simulate',
-  }
-
-  logger().info(quote)
-  const sim = await simulate(config)(
-    {
-      fromToken: quote.action.fromToken.address,
-      toToken: quote.action.toToken.address,
-      fromChain: quote.action.fromChainId,
-      fromAmount: BigInt(quote.action.fromAmount),
-      transactionRequest: quote.transactionRequest!,
-    },
-    {
-      senderTokenBalanceAndApproval: true,
-      senderNativeBalance: false,
-    }
+const quote = await http()
+  .get<LiFiStep>(
+    'https://li.quest/v1/quote?fromChain=POL&fromAmount=1000000&fromToken=USDC&fromAddress=0x552008c0f6870c2f77e5cC1d2eb9bdff03e30Ea0&toChain=POL&toToken=DAI&integrator=postman&slippage=0.03'
   )
+  .then((q) => q.data)
+
+const config: TenderlyConfig = {
+  accessKey: '---',
+  user: 'LiFi',
+  project: 'simulate',
+}
+
+logger().info(quote)
+const sim = await simulate(config)(
+  {
+    fromToken: quote.action.fromToken.address,
+    toToken: quote.action.toToken.address,
+    fromChain: quote.action.fromChainId,
+    fromAmount: BigInt(quote.action.fromAmount),
+    transactionRequest: quote.transactionRequest!,
+  },
+  {
+    senderTokenBalanceAndApproval: true,
+    senderNativeBalance: false,
+  }
+)
 ```
 
 which results in the following response:

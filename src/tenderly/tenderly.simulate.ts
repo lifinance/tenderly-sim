@@ -1,5 +1,4 @@
 import { ChainId, ErrorCode, TransactionRequest } from '@lifi/types'
-
 import { LifiError } from '@tenderlysim/common'
 import { logger } from '@tenderlysim/logger'
 
@@ -12,7 +11,7 @@ import {
 import { getTokenOverwrite } from './tenderly.overwrites'
 
 // TODO: improve code quality
-/* eslint-disable complexity, max-lines-per-function */
+/* oxlint-disable complexity, max-lines-per-function */
 
 const validateTransactionRequest = (
   transactionRequest?: TransactionRequest

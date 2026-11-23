@@ -18,7 +18,7 @@ const runner = async () => {
     project: 'simulate',
   }
 
-  logger().info(quote)
+  logger.info(quote)
   const sim = await simulate(config)(
     {
       fromToken: quote.action.fromToken.address,
@@ -37,5 +37,5 @@ const runner = async () => {
 }
 
 runner()
-  .then((res) => logger().info(res))
-  .catch((err) => logger().error(err))
+  .then((res) => logger.info(res))
+  .catch((err) => logger.error(err))

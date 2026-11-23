@@ -63,7 +63,7 @@ const getApprovalMapping = (
     .find((mask) => mask)
 
   if (mask === undefined) {
-    logger().warn(
+    logger.warn(
       {
         service: 'getApprovalMapping',
         data: tokenStates,
@@ -101,7 +101,7 @@ const getBalanceMapping = (
     .find((mask) => mask)
 
   if (mask === undefined) {
-    logger().warn(
+    logger.warn(
       {
         service: 'getBalanaceMapping',
         data: tokenStates,

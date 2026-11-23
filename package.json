@@ -37,7 +37,7 @@
     "format:check": "oxfmt --check"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=26"
   },
   "license": "Apache-2.0",
   "devDependencies": {

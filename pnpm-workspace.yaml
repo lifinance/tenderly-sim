@@ -1,0 +1,10 @@
+overrides:
+  'glob@>=10 <14.0.2': ^14.0.2
+  'minimatch@>=9 <11.0.1': ^11.0.1
+
+# Dependencies allowed (true) or blocked (false) from running build scripts on install.
+# All blocked: pnpm 10 skipped these scripts as well, and nothing here needs them.
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
+  es5-ext: false

@@ -22,28 +22,43 @@ const extractStates = (
   contract: Awaited<ReturnType<typeof getPublicTokenContract>>
 ): State[] | undefined => contract?.data?.states
 
-const _getContractStates =
-  (tenderlyConfig: TenderlyConfig) =>
-  async (
-    chainId: ChainId,
-    tokenAddress: string
-  ): Promise<State[] | undefined> => {
-    const publicStates = extractStates(
-      await getPublicTokenContract(chainId, tokenAddress)
-    )
-    if (publicStates !== undefined) {
-      return publicStates
-    }
-
-    return extractStates(
-      await getTokenContract(tenderlyConfig)(chainId, tokenAddress)
-    )
+// Rejects when no states are found, so the caller can evict the failed entry
+// and the next call retries instead of reusing the failure for 1h.
+const fetchContractStates = async (
+  tenderlyConfig: TenderlyConfig,
+  chainId: ChainId,
+  tokenAddress: string
+): Promise<State[]> => {
+  const states =
+    extractStates(await getPublicTokenContract(chainId, tokenAddress)) ??
+    extractStates(await getTokenContract(tenderlyConfig)(chainId, tokenAddress))
+  if (states === undefined) {
+    throw new Error(`No contract states for ${chainId}/${tokenAddress}`)
   }
+  return states
+}
 
-const getContractStates = memoizee(_getContractStates, {
+const cachedContractStates = memoizee(fetchContractStates, {
   promise: true,
   maxAge: 60 * 60 * 1000, // 1h
+  max: 1000, // least recently used entries are dropped beyond this
+  // Key on values, not on the config object's identity. The access key is part
+  // of the key so one credential's failed project lookup never fails another's.
+  normalizer: ([{ accessKey, user, project }, chainId, tokenAddress]) =>
+    JSON.stringify([accessKey, user, project, chainId, tokenAddress]),
 })
+
+const getContractStates = (
+  tenderlyConfig: TenderlyConfig,
+  chainId: ChainId,
+  tokenAddress: string
+): Promise<State[] | undefined> =>
+  cachedContractStates(tenderlyConfig, chainId, tokenAddress).catch(() => {
+    // memoizee only evicts a rejected entry on the next tick; evict it now so
+    // an immediate retry makes a new request.
+    cachedContractStates.delete(tenderlyConfig, chainId, tokenAddress)
+    return undefined
+  })
 
 const getApprovalMapping = (
   tokenImplementationAddress: string,
@@ -144,7 +159,8 @@ export const getTokenOverwrite =
       params.tokenAddress.toLowerCase() as Lowercase<string>
     )
 
-    const contractStates = await getContractStates(tenderlyConfig)(
+    const contractStates = await getContractStates(
+      tenderlyConfig,
       params.chainId,
       tokenImplementationAddress
     )

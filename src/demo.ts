@@ -1,9 +1,9 @@
 import { LiFiStep } from '@lifi/types'
 
 import { http } from './http'
+import { logger } from './logger'
 import { simulate } from './tenderly'
 import { TenderlyConfig } from './tenderly/tenderly.config'
-import { logger } from './logger'
 
 const runner = async () => {
   const quote = await http()

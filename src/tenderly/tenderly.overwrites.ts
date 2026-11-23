@@ -1,9 +1,8 @@
 import { ChainId, ErrorCode } from '@lifi/types'
+import { LifiError } from '@tenderlysim/common'
+import { logger } from '@tenderlysim/logger'
 import { ethers } from 'ethers'
 import memoizee from 'memoizee'
-
-import { logger } from '@tenderlysim/logger'
-import { LifiError } from '@tenderlysim/common'
 
 import {
   encodeContractStates,

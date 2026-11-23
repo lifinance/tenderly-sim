@@ -1,5 +1,3 @@
-import { setImmediate } from 'node:timers/promises'
-
 import { getTokenOverwrite } from './tenderly.overwrites'
 
 const get = jest.fn()
@@ -26,7 +24,11 @@ const overwriteParams = (tokenAddress: string) => ({
 })
 
 // A new object per call, like consumers that build the config per request.
-const config = () => ({ accessKey: 'key', user: 'user', project: 'project' })
+const config = (accessKey = 'key') => ({
+  accessKey,
+  user: 'user',
+  project: 'project',
+})
 
 describe('getTokenOverwrite', () => {
   beforeEach(() => {
@@ -50,7 +52,26 @@ describe('getTokenOverwrite', () => {
     expect(get).toHaveBeenCalledTimes(1)
   })
 
-  it('retries the lookup after a failed one instead of caching the failure', async () => {
+  it('does not share a failed lookup across access keys', async () => {
+    // Public lookup misses; the project lookup fails for the bad key only.
+    get.mockImplementation(
+      async (url: string, options?: { headers: Record<string, string> }) => {
+        if (url.includes('public-contracts')) return { data: {} }
+        if (options?.headers['X-Access-Key'] === 'bad') throw new Error('401')
+        return { data: { contract: { data: { states } } } }
+      }
+    )
+
+    const [bad, good] = await Promise.allSettled([
+      getTokenOverwrite(config('bad'))(overwriteParams('0xccc')),
+      getTokenOverwrite(config('good'))(overwriteParams('0xccc')),
+    ])
+
+    expect(bad.status).toBe('rejected')
+    expect(good.status).toBe('fulfilled')
+  })
+
+  it('retries immediately after a failed lookup instead of reusing the failure', async () => {
     get.mockRejectedValue(new Error('network'))
     await expect(
       getTokenOverwrite(config())(overwriteParams('0xbbb'))
@@ -58,8 +79,6 @@ describe('getTokenOverwrite', () => {
     // public + project endpoint
     expect(get).toHaveBeenCalledTimes(2)
 
-    // memoizee evicts a rejected entry on the next tick.
-    await setImmediate()
     get.mockReset()
     get.mockResolvedValue({ data: { data: { states } } })
     await getTokenOverwrite(config())(overwriteParams('0xbbb'))

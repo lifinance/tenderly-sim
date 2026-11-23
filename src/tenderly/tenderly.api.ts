@@ -32,7 +32,7 @@ export const getTokenContract =
       })
       return result.data.contract
     } catch (e) {
-      logger().warn(`[tenderly] getTokenContract failed ${e}`)
+      logger.warn(`[tenderly] getTokenContract failed ${e}`)
       return undefined
     }
   }
@@ -46,7 +46,7 @@ export const getPublicTokenContract = async (
     const result = await http().get<TenderlyContract>(url)
     return result.data
   } catch (e) {
-    logger().warn(`[tenderly] getPublicTokenContract failed ${e}`)
+    logger.warn(`[tenderly] getPublicTokenContract failed ${e}`)
     return undefined
   }
 }
@@ -141,7 +141,7 @@ export const getTransactionDetails =
 
       return response.data
     } catch (error) {
-      logger().warn(
+      logger.warn(
         `[tenderly] Get transaction information call failed: ${getErrorMessage(
           error
         )}`

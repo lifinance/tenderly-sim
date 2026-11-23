@@ -156,7 +156,7 @@ export const simulate =
         spenderAddress: transactionRequest.to,
       })
     } catch (e) {
-      logger().error(e)
+      logger.error(e)
       return {
         result: 'IMPOSSIBLE',
         error: 'MAPPING_MISSING',

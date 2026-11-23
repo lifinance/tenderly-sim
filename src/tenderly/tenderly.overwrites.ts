@@ -22,27 +22,28 @@ const extractStates = (
   contract: Awaited<ReturnType<typeof getPublicTokenContract>>
 ): State[] | undefined => contract?.data?.states
 
-const _getContractStates =
-  (tenderlyConfig: TenderlyConfig) =>
-  async (
-    chainId: ChainId,
-    tokenAddress: string
-  ): Promise<State[] | undefined> => {
-    const publicStates = extractStates(
-      await getPublicTokenContract(chainId, tokenAddress)
-    )
-    if (publicStates !== undefined) {
-      return publicStates
-    }
-
-    return extractStates(
-      await getTokenContract(tenderlyConfig)(chainId, tokenAddress)
-    )
+// Rejects when no states are found: memoizee does not cache rejected promises,
+// so a failed lookup is retried on the next call instead of being cached for 1h.
+const fetchContractStates = async (
+  tenderlyConfig: TenderlyConfig,
+  chainId: ChainId,
+  tokenAddress: string
+): Promise<State[]> => {
+  const states =
+    extractStates(await getPublicTokenContract(chainId, tokenAddress)) ??
+    extractStates(await getTokenContract(tenderlyConfig)(chainId, tokenAddress))
+  if (states === undefined) {
+    throw new Error(`No contract states for ${chainId}/${tokenAddress}`)
   }
+  return states
+}
 
-const getContractStates = memoizee(_getContractStates, {
+const getContractStates = memoizee(fetchContractStates, {
   promise: true,
   maxAge: 60 * 60 * 1000, // 1h
+  // Key on values, not on the config object's identity.
+  normalizer: ([{ user, project }, chainId, tokenAddress]) =>
+    `${user}/${project}/${chainId}/${tokenAddress}`,
 })
 
 const getApprovalMapping = (
@@ -144,10 +145,11 @@ export const getTokenOverwrite =
       params.tokenAddress.toLowerCase() as Lowercase<string>
     )
 
-    const contractStates = await getContractStates(tenderlyConfig)(
+    const contractStates = await getContractStates(
+      tenderlyConfig,
       params.chainId,
       tokenImplementationAddress
-    )
+    ).catch(() => undefined)
     if (contractStates === undefined) {
       throw LifiError({
         message: `Unable to find contract states.`,

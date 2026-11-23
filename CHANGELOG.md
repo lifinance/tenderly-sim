@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.70](https://github.com/lifinance/tenderly-sim/compare/v0.0.68...v0.0.70) (2026-11-23)
+
+
+### Bug Fixes
+
+* cache Tenderly contract-state lookups (EXBE-776) ([7e8e7b5](https://github.com/lifinance/tenderly-sim/commit/7e8e7b5367ec807378bd23f1863b72a84c2f5fbb))
+* **deps:** bump vulnerable dependencies (EXBE-741) ([#98](https://github.com/lifinance/tenderly-sim/issues/98)) ([5d3c56d](https://github.com/lifinance/tenderly-sim/commit/5d3c56d7667fcf48f3a4e4bb08ded84000b94ba6))
+* scope contract-state cache per credential, cap size, evict failures at once (EXBE-776) ([e890547](https://github.com/lifinance/tenderly-sim/commit/e890547dc740fc72e940715a18325a2c9f7552fb))
+
 ### [0.0.68](https://github.com/lifinance/tenderly-sim/compare/v0.0.67...v0.0.68) (2026-11-03)
 
 ### [0.0.67](https://github.com/lifinance/tenderly-sim/compare/v0.0.66...v0.0.67) (2026-08-28)

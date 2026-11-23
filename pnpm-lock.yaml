@@ -192,9 +192,6 @@ importers:
       '@lifi/types':
         specifier: 19.0.0
         version: 19.0.0
-      '@types/memoizee':
-        specifier: ^0.4.12
-        version: 0.4.12
       axios:
         specifier: ^1.20.0
         version: 1.21.1
@@ -204,12 +201,6 @@ importers:
       pino:
         specifier: ^10.3.1
         version: 10.3.1
-      resolve-tspaths:
-        specifier: ^0.8.23
-        version: 0.8.23(typescript@6.0.2)
-      tsconfig-paths:
-        specifier: ^4.2.0
-        version: 4.2.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.5.0
@@ -223,6 +214,9 @@ importers:
       '@types/jest':
         specifier: ^30.0.0
         version: 30.0.0
+      '@types/memoizee':
+        specifier: ^0.4.12
+        version: 0.4.12
       '@types/node':
         specifier: ^26.6.6
         version: 26.6.6
@@ -250,6 +244,9 @@ importers:
       oxlint-tsgolint:
         specifier: ^7.0.2006
         version: 7.0.2007
+      resolve-tspaths:
+        specifier: ^0.8.23
+        version: 0.8.23(typescript@6.0.2)
       standard-version:
         specifier: ^9.5.0
         version: 9.5.0
@@ -259,6 +256,9 @@ importers:
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@swc/core@1.7.35)(@types/node@26.6.6)(typescript@6.0.2)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
       typescript:
         specifier: ^6.0.2
         version: 6.0.2

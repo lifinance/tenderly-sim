@@ -1,7 +1,6 @@
 import { ChainId, ErrorCode } from '@lifi/types'
 import { LifiError } from '@tenderlysim/common'
 import { logger } from '@tenderlysim/logger'
-import { ethers } from 'ethers'
 import memoizee from 'memoizee'
 
 import {
@@ -16,6 +15,8 @@ import {
   knownProxyTokens,
 } from './tenderly.config'
 import { State } from './tenderly.types.contract'
+
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
 const extractStates = (
   contract: Awaited<ReturnType<typeof getPublicTokenContract>>
@@ -134,7 +135,7 @@ export const getTokenOverwrite =
     ownerAddress: string
     spenderAddress: string
   }) => {
-    if (params.tokenAddress === ethers.ZeroAddress) {
+    if (params.tokenAddress === ZERO_ADDRESS) {
       return {}
     }
 

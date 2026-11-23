@@ -45,35 +45,25 @@
     "@commitlint/config-conventional": "^20.5.0",
     "@swc/jest": "^0.2.39",
     "@types/jest": "^30.0.0",
+    "@types/memoizee": "^0.4.12",
     "@types/node": "^26.6.6",
     "husky": "^9.1.7",
     "jest": "^30.5.2",
-    "jest-junit": "^17.0.0",
-    "jest-mock-extended": "^4.0.0",
     "madge": "^8.0.0",
     "oxfmt": "^0.76.0",
     "oxlint": "^1.91.0",
     "oxlint-tsgolint": "^7.0.2006",
+    "resolve-tspaths": "^0.8.23",
     "standard-version": "^9.5.0",
-    "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^6.0.2"
   },
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@12.23.0",
   "dependencies": {
     "@lifi/types": "19.0.0",
-    "@types/memoizee": "^0.4.12",
     "axios": "^1.20.0",
-    "ethers": "^6.17.0",
     "memoizee": "^0.4.17",
-    "pino": "^10.3.1",
-    "resolve-tspaths": "^0.8.23",
-    "tsconfig-paths": "^4.2.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "glob@>=10 <14.0.2": "^14.0.2",
-      "minimatch@>=9 <11.0.1": "^11.0.1"
-    }
+    "pino": "^10.3.1"
   }
 }

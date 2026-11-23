@@ -51,7 +51,5 @@ jobs:
         run: pnpm test
       - name: Publish to npm
         run: |
-          pnpm publish --no-git-checks --access public \
+          pnpm publish --no-git-checks --access public --provenance \
           ${{ contains(github.ref_name, 'alpha') && '--tag alpha' || contains(github.ref_name, 'beta') && '--tag beta' || '' }}
-        env:
-          NPM_CONFIG_PROVENANCE: true

@@ -20,7 +20,7 @@ mapped for Jest in `jest.config.ts`); `pnpm build` rewrites the alias with `reso
 
 ## Commands
 
-pnpm (version pinned in `packageManager`), Node 20 or newer (`.nvmrc`).
+pnpm (version pinned in `packageManager`), Node 26 or newer (`.nvmrc`, `engines`).
 
 ```bash
 pnpm install
